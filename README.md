@@ -1,0 +1,2 @@
+可以先写html放在templates文件夹中
+css或者js放在static里
