@@ -125,4 +125,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-STATIC_ROOT = '/var/www/cplash/cplash/static'
+STATIC_ROOT = '/var/www/cplash/static'
