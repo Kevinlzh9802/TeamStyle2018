@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% block title %} Show Team--{{username}} {% endblock%}
+{% block headmessage %}
+{{message}}
+{% endblock%}
+{% block content %}
+	{% if myteam %}
+		<table>
+			<h3>team name:{{myteam.name}}</h3><br/>
+			<h3>leader:{{myteam.leader}}</h3><br/>
+		</table>
+	{% else %}
+		<h3>No Team!</h3>
+	{% endif %}
+	<a href="/team">Return</a><br/>
+{% endblock %}

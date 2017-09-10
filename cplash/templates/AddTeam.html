@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block title %} Add Team {% endblock%}
+{% block headmessage %}
+{{message}}
+{% endblock%}
+{% block content %}
+	<form action='/team/add' method='POST'>
+		{% csrf_token %}
+			<table>
+				{{add_form.as_table}}
+			</table>
+		<input type="submit" value="Submit"><br/>
+	</form>
+	<a href="/team">Return</a><br/>
+{% endblock %}

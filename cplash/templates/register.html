@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% block title %} Register {% endblock%}
+{% block headmessage %}
+{{message}}
+{% endblock%}
+{% block content %}
+	<form action='.' method='POST'>
+		{% csrf_token %}
+			<table>
+				{{reg_form.as_table}}
+			</table>
+		<input type="submit" value="Submit"><br/>
+	</form>
+{% endblock %}

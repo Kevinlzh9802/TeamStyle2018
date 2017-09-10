@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block title %} LogIn {% endblock%}
+{% block headmessage %}
+{{message}}
+{% if flag %}
+<h3 style="font-size:10 ">
+	{{username}}您已登录
+</h3>
+{% endif %}
+{% endblock%}
+{% block content %}
+{% if flag %}
+	<a href="/logout">LOG OUT</a><br/>
+{% else %}
+	<form action='.' method='POST'>
+		{% csrf_token %}
+			<table>
+				{{login_form.as_table}}
+			</table>
+		<input type="submit" value="LOG IN"><br/>
+	</form>
+{% endif %}	
+	<a href="/">Return</a><br/>
+{% endblock %}

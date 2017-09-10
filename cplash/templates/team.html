@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% block title %} Team {% endblock%}
+{% block headmessage %}
+{{message}}
+{% endblock%}
+{% block content %}
+	<table>
+	<tr bgcolor='#cccccc'>
+		<td width=250>队名</td>
+		<td width=150>队长</td>
+	</tr>
+	{% for t in team %}
+	<tr bgcolor='{% cycle "#ffccff" "ccffcc" %}'>
+		<td>{{t.name}}</td>
+		<td>{{t.leader}}</td>
+	</tr>
+	{% endfor %}
+	</table>	
+	<form action='.' method='GET'>
+		<label>用邀请码加入队伍：</label>
+		<input type="text" name="input_code">
+		<input type="submit" value="submit">
+	</form>
+	
+	<br>
+	<a href="/">Return</a><br/>
+	<a href="/team/show/{{username}}">My Team</a><br/>
+	<a href="/team/add">ADD TEAM</a>
+	
+{% endblock %}

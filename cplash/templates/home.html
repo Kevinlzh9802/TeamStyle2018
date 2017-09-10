@@ -6,4 +6,10 @@
 </h3>
 {% endblock%}
 {% block content %}
+	{{message}}<br/>
+	<a href="/login">登录</a>
+	{% if username %}
+	<br/>
+	<a href="/logout">LOG OUT</a>
+	{% endif %}	
 {% endblock %}

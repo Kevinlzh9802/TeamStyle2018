@@ -15,9 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from mainsite.views import homepage
+from mainsite import views
 
 urlpatterns = [
-	url(r'^$',homepage),
+	url(r'^$',views.homepage),
+	url(r'^login/',views.login),
+	url(r'^logout/$',views.logout),
+	url(r'^register/$',views.register),
+	url(r'^rule/$',views.rule),
+	url(r'^team/$',views.team),
+	url(r'^team/add$',views.add_team),
+	url(r'^team/show/(\w+)$',views.show_team),
     url(r'^admin/', admin.site.urls),
 ]
