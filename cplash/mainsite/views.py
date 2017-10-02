@@ -112,6 +112,9 @@ def register(request):
 	return response
 
 def rule(request):
+	if 'username' in request.session:
+		flag = True
+		username = request.session['username']
 	template = get_template('rule.html')
 	return HttpResponse(template.render(locals()))
 

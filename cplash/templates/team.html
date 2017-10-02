@@ -8,11 +8,13 @@
 	<tr bgcolor='#cccccc'>
 		<td width=250>队名</td>
 		<td width=150>队长</td>
+		<td width=150>队员一</td>
 	</tr>
 	{% for t in team %}
 	<tr bgcolor='{% cycle "#ffccff" "ccffcc" %}'>
 		<td>{{t.name}}</td>
 		<td>{{t.leader}}</td>
+		<td>{{t.mate_one}}</td>
 	</tr>
 	{% endfor %}
 	</table>	

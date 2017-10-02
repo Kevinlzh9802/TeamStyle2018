@@ -32,7 +32,7 @@ class Student(models.Model):
 class Team(models.Model):
 	name = models.CharField(max_length=20,default="none",verbose_name="名称")
 	leader = models.ForeignKey(User, null=True,on_delete=models.SET_NULL)
-
+	mate_one = models.CharField(max_length=20,default="none",verbose_name="队员一")
 	code = models.CharField(max_length=8,verbose_name="邀请码",null =False,default="00000000")
 
 	def __unicode__(self):
